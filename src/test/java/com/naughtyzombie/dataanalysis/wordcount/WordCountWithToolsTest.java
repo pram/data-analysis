@@ -48,13 +48,16 @@ public class WordCountWithToolsTest {
     public void testWordCountReduce() throws IOException {
 
         ArrayList<IntWritable> reduceInList = new ArrayList<IntWritable>();
+        //Represents individual results from nodes
         reduceInList.add(new IntWritable(1));
         reduceInList.add(new IntWritable(2));
 
+        //Adding expected inputs
         reduceDriver.withInput(new Text("Quick"), reduceInList);
         reduceDriver.withInput(new Text("Test"), reduceInList);
 
         ArrayList<Pair<Text, IntWritable>> reduceOutList = new ArrayList<Pair<Text, IntWritable>>();
+        //Adding outputs. This is the summation of the input keys against the reduce calculation
         reduceOutList.add(new Pair<Text, IntWritable>(new Text("Quick"), new IntWritable(3)));
         reduceOutList.add(new Pair<Text, IntWritable>(new Text("Test"), new IntWritable(3)));
 
@@ -68,10 +71,11 @@ public class WordCountWithToolsTest {
         IntWritable inKey = new IntWritable(0);
         mapReduceDriver.withInput(inKey, new Text("Test Quick"));
         mapReduceDriver.withInput(inKey, new Text("Test Quick"));
+        mapReduceDriver.withInput(inKey, new Text("Test Quick"));
 
         ArrayList<Pair<Text, IntWritable>> reduceOutList = new ArrayList<Pair<Text, IntWritable>>();
-        reduceOutList.add(new Pair<Text, IntWritable>(new Text("Quick"), new IntWritable(2)));
-        reduceOutList.add(new Pair<Text, IntWritable>(new Text("Test"), new IntWritable(2)));
+        reduceOutList.add(new Pair<Text, IntWritable>(new Text("Quick"), new IntWritable(3)));
+        reduceOutList.add(new Pair<Text, IntWritable>(new Text("Test"), new IntWritable(3)));
 
         mapReduceDriver.withAllOutput(reduceOutList);
         mapReduceDriver.runTest();
