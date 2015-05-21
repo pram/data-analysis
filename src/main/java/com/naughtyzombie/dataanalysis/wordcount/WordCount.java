@@ -60,7 +60,7 @@ public class WordCount {
         job.setMapperClass(TokenizerMapper.class);
 
         /**** Uncomment the following line to enable the Combiner ****/
-        //job.setCombinerClass(IntSumReducer.class);
+        job.setCombinerClass(IntSumReducer.class);
 
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);

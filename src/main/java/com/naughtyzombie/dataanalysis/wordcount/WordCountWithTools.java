@@ -29,7 +29,7 @@ public class WordCountWithTools extends Configured implements Tool {
         job.setJarByClass(WordCount.class);
         job.setMapperClass(WordCount.TokenizerMapper.class);
         // Uncomment this to
-        // job.setCombinerClass(IntSumReducer.class);
+        job.setCombinerClass(WordCount.IntSumReducer.class);
         job.setReducerClass(WordCount.IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
