@@ -30,3 +30,5 @@ The job should and complete. Check the output folder in hdfs to ensure that the 
 ## Config notes
 
 The VM config area is `/etc/hadoop/conf/`
+
+[DFS Health](http://192.168.0.10:50070/dfshealth.jsp) Monitoring App
