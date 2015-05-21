@@ -26,3 +26,7 @@ Now you can run the job. For example running the following
 The job should and complete. Check the output folder in hdfs to ensure that the results are present.
 
     hadoop fs -ls output
+    
+## Config notes
+
+The VM config area is `/etc/hadoop/conf/`
