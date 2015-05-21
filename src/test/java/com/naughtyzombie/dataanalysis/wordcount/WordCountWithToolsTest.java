@@ -33,11 +33,13 @@ public class WordCountWithToolsTest {
         //Add inputs to mapper
         mapDriver.withInput(inKey, new Text("Test Quick"));
         mapDriver.withInput(inKey, new Text("Test Quick"));
+        mapDriver.withInput(inKey, new Text("Quick"));
 
         //Expected outputs from mapper
         mapDriver.withOutput(new Text("Test"), new IntWritable(1));
         mapDriver.withOutput(new Text("Quick"), new IntWritable(1));
         mapDriver.withOutput(new Text("Test"), new IntWritable(1));
+        mapDriver.withOutput(new Text("Quick"), new IntWritable(1));
         mapDriver.withOutput(new Text("Quick"), new IntWritable(1));
         mapDriver.runTest();
     }
