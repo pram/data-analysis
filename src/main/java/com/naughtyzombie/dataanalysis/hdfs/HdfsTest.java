@@ -3,6 +3,7 @@ package com.naughtyzombie.dataanalysis.hdfs;
 import java.security.PrivilegedExceptionAction;
 
 import org.apache.hadoop.conf.*;
+import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.FileSystem;
@@ -27,6 +28,9 @@ public class HdfsTest {
                     FileSystem fs = FileSystem.get(conf);
 
                     fs.createNewFile(new Path("/user/guest/test"));
+                    FSDataOutputStream out = fs.create(new Path("/user/guest/test"));
+                    out.writeUTF("woooo");
+                    out.close();
 
                     FileStatus[] status = fs.listStatus(new Path("/user/guest"));
                     for(int i=0;i<status.length;i++){
