@@ -33,27 +33,4 @@ public class LogProcessorMap extends Mapper<LongWritable, Text, Text, LogWritabl
         outValue.set(userIP, timestamp, request, bytes, status);
         context.write(outKey, outValue);
     }
-
-    /*@Override
-    public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-        String logEntryPattern = "^(\\S+) (\\S+) (\\S+) \\[([\\w:/]+\\s[+\\-]\\d{4})\\] \"(.+?)\" (\\d{3}) (\\d+)";
-
-        Pattern p = Pattern.compile(logEntryPattern);
-        Matcher matcher = p.matcher(value.toString());
-        if (!matcher.matches()) {
-            System.err.println("Bad Record : " + value);
-            return;
-        }
-
-        String userIP = matcher.group(1);
-        String timestamp = matcher.group(4);
-        String request = matcher.group(5);
-        int status = Integer.parseInt(matcher.group(6));
-        int bytes = Integer.parseInt(matcher.group(7));
-
-        outKey.set(userIP);
-        outValue.set(userIP, timestamp, request, bytes, status);
-        context.write(outKey, outValue);
-    }*/
-
 }
