@@ -27,8 +27,13 @@ The job should and complete. Check the output folder in hdfs to ensure that the 
 
     hadoop fs -ls output
     
+Running the LogWritable example
+
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.logwritable.LogProcessor /user/guest/logwritable-input /user/guest/logwritable-output 3
+    
 ## Config notes
 
 The VM config area is `/etc/hadoop/conf/`
 
 [DFS Health](http://192.168.0.10:50070/dfshealth.jsp) Monitoring App
+
