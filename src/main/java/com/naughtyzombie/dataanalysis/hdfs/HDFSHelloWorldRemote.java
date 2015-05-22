@@ -16,8 +16,11 @@ public class HDFSHelloWorldRemote {
 
   public static void main (String [] args) throws IOException {
 
+    System.setProperty("HADOOP_USER_NAME", "guest");
+
     Configuration conf = new Configuration();
-    conf.set("fs.defaultFS", "hdfs://192.168.0.10:8020");
+    conf.set("fs.defaultFS", "hdfs://PramithtalesPro:8020");
+    conf.set("hadoop.job.ugi", "guest");
     FileSystem fs = FileSystem.get(conf);
 
     Path filenamePath = new Path(theFilename);
