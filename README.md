@@ -35,6 +35,7 @@ Running the Analytics examples
 
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.MsgSizeAggregateMapReduce /user/guest/logwritable-input /user/guest/msgsize-out
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.HitCountMapReduce /user/guest/logwritable-input /user/guest/hit-count-out
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.FrequencyDistributionMapReduce /user/guest/hit-count-out /user/guest/freq-dist-out
     
 ## Config notes
 
