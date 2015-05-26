@@ -38,6 +38,7 @@ Running the Analytics examples
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.FrequencyDistributionMapReduce /user/guest/hit-count-out /user/guest/freq-dist-out
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.CountReceivedRepliesMapReduce /user/guest/mbox /user/guest/count-replies-out
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.CountSentRepliesMapReduce /user/guest/mbox /user/guest/count-emails-out
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.JoinSentReceivedReplies /user/guest/join-input /user/guest/join-output
     
 ## Config notes
 
