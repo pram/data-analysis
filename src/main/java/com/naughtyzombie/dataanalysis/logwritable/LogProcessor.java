@@ -49,6 +49,7 @@ public class LogProcessor extends Configured implements Tool {
         job.setOutputValueClass(IntWritable.class);
 
         job.setInputFormatClass(LogFileInputFormat.class);
+        job.setPartitionerClass(IPBasedPartitioner.class);
         FileInputFormat.setInputPaths(job, new Path(inputPath));
         FileOutputFormat.setOutputPath(job, new Path(outputPath));
 
