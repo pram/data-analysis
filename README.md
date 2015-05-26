@@ -31,6 +31,11 @@ Running the LogWritable example
 
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.logwritable.LogProcessor /user/guest/logwritable-input /user/guest/logwritable-output 3
     
+Running the Analytics examples
+
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.MsgSizeAggregateMapReduce /user/guest/logwritable-input /user/guest/msgsize-out
+    
+    
 ## Config notes
 
 The VM config area is `/etc/hadoop/conf/`
