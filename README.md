@@ -34,7 +34,7 @@ Running the LogWritable example
 Running the Analytics examples
 
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.MsgSizeAggregateMapReduce /user/guest/logwritable-input /user/guest/msgsize-out
-    
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.weblog.HitCountMapReduce /user/guest/logwritable-input /user/guest/hit-count-out
     
 ## Config notes
 
