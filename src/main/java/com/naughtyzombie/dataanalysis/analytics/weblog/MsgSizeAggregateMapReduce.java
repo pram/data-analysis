@@ -48,8 +48,7 @@ public class MsgSizeAggregateMapReduce extends Configured implements Tool {
 		FileInputFormat.setInputPaths(job, new Path(inputPath));
 		FileOutputFormat.setOutputPath(job, new Path(outputPath));
 
-		int exitStatus = job.waitForCompletion(true) ? 0 : 1;
-		return exitStatus;
+		return job.waitForCompletion(true) ? 0 : 1;
 	}
 
 	public static class AMapper extends Mapper<Object, Text, Text, IntWritable> {
