@@ -40,6 +40,13 @@ Running the Analytics examples
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.CountSentRepliesMapReduce /user/guest/mbox /user/guest/count-emails-out
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.JoinSentReceivedReplies /user/guest/join-input /user/guest/join-output
     
+Running the Inverted Index Example
+
+    hadoop fs -mkdir -p invertedindex/input
+    echo "cat sat mat" | hadoop fs -put - invertedindex/input/1.txt
+    echo "dog lay mat" | hadoop fs -put - invertedindex/input/2.txt
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.invertedindex.InvertedIndex --input invertedindex/input --output invertedindex/output
+    
 ## Config notes
 
 The VM config area is `/etc/hadoop/conf/`
