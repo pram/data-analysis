@@ -42,10 +42,12 @@ Running the Analytics examples
     
 Running the Inverted Index Example
 
-    hadoop fs -mkdir -p invertedindex/input
-    echo "cat sat mat" | hadoop fs -put - invertedindex/input/1.txt
-    echo "dog lay mat" | hadoop fs -put - invertedindex/input/2.txt
-    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.invertedindex.InvertedIndex --input invertedindex/input --output invertedindex/output
+    hdfs dfs -mkdir -p invertedindex/input
+    echo "cat sat mat" | hdfs dfs -put - invertedindex/input/1.txt
+    echo "dog lay mat" | hdfs dfs -put - invertedindex/input/2.txt
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.invertedindex.InvertedIndex invertedindex/input invertedindex/output
+    
+    hdfs dfs -cat invertedindex/output/part*
     
 ## Config notes
 
