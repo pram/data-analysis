@@ -49,6 +49,12 @@ Running the Inverted Index Example
     
     hdfs dfs -cat invertedindex/output/part*
     
+Running the CSV example. Upload an example CSV file
+
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.csv.CSVMapReduce csv/input csv/output
+    
+    hdfs dfs -cat csv/output/part*
+    
 ## Config notes
 
 The VM config area is `/etc/hadoop/conf/`
