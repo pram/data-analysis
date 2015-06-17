@@ -54,6 +54,14 @@ Running the CSV example. Upload an example CSV file
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.csv.CSVMapReduce csv/input csv/output
     
     hdfs dfs -cat csv/output/part*
+
+Running the multiple outputs example
+
+    mkdir ../libtemp
+    wget http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.0/commons-lang3-3.0.jar
+    mv commons-lang3-3.0.jar ../libtemp
+    
+    hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.multipleoutputs.MultipleOutputsJob -libjars ../libtemp/commons-lang3-3.0.jar csv/input csv/multi-output
     
 ## Config notes
 
