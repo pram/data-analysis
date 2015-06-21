@@ -41,7 +41,7 @@ Running the Analytics examples
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.CountSentRepliesMapReduce /user/guest/mbox /user/guest/count-emails-out
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.JoinSentReceivedReplies /user/guest/join-input /user/guest/join-output
     
-Running the Inverted Index Example
+Running the Inverted Index Example -
 
     hdfs dfs -mkdir -p invertedindex/input
     echo "cat sat mat" | hdfs dfs -put - invertedindex/input/1.txt
@@ -69,4 +69,6 @@ Running the multiple outputs example
 The VM config area is `/etc/hadoop/conf/`
 
 [DFS Health](http://192.168.0.10:50070/dfshealth.jsp) Monitoring App
+
+
 
