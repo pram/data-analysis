@@ -2,7 +2,7 @@
 
 Big Data Analysis examples using Hadoop
 
-After cloning run the following command from the checkout directory
+After cloning run the following command from the checkout directory.
 
     chmod 755 gradlew
     
@@ -18,7 +18,7 @@ If you now check the directory `build/libs/` you should see the jar file present
 
 You now want to copy the data into hdfs. Run the command
 
-    hadoop fs -copyFromLocal data
+    hdfs dfs -copyFromLocal data
     
 Now you can run the job. For example running the following
 
