@@ -64,6 +64,10 @@ Running the multiple outputs example
     
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.multipleoutputs.MultipleOutputsJob -libjars ../libtemp/commons-lang3-3.0.jar csv/input csv/multi-output
     
+Running the Spark Wordcount example
+
+    spark-submit --class com.naughtyzombie.dataanalysis.sparkexample.WordCount --master yarn-client --num-executors 3 --driver-memory 512m --executor-memory 512m --executor-cores 1 build/libs/data-analysis.jar /user/guest/join-input /user/guest/spark-wc-out
+    
 ## Config notes
 
 The VM config area is `/etc/hadoop/conf/`
