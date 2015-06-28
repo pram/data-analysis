@@ -1,7 +1,8 @@
 # Data Analysis
+
 Big Data Analysis examples using Hadoop
 
-After cloning run the following command from the checkout directory
+After cloning run the following command from the checkout directory.
 
     chmod 755 gradlew
     
@@ -17,7 +18,7 @@ If you now check the directory `build/libs/` you should see the jar file present
 
 You now want to copy the data into hdfs. Run the command
 
-    hadoop fs -copyFromLocal data
+    hdfs dfs -copyFromLocal data
     
 Now you can run the job. For example running the following
 
@@ -40,7 +41,7 @@ Running the Analytics examples
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.CountSentRepliesMapReduce /user/guest/mbox /user/guest/count-emails-out
     hadoop jar build/libs/data-analysis.jar com.naughtyzombie.dataanalysis.analytics.mbox.JoinSentReceivedReplies /user/guest/join-input /user/guest/join-output
     
-Running the Inverted Index Example
+Running the Inverted Index Example -
 
     hdfs dfs -mkdir -p invertedindex/input
     echo "cat sat mat" | hdfs dfs -put - invertedindex/input/1.txt
@@ -68,4 +69,6 @@ Running the multiple outputs example
 The VM config area is `/etc/hadoop/conf/`
 
 [DFS Health](http://192.168.0.10:50070/dfshealth.jsp) Monitoring App
+
+
 
