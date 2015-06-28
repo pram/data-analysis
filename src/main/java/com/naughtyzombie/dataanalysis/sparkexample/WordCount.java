@@ -42,7 +42,7 @@ public class WordCount {
       System.exit(0);
     }
 
-    SparkConf conf = new SparkConf().setAppName("com.naughtyzombie.dataanalysis.sparkexample.WordCount").setMaster("yarn-client");
+    SparkConf conf = new SparkConf().setAppName("com.naughtyzombie.dataanalysis.sparkexample.WordCount").setMaster("local");
     JavaSparkContext context = new JavaSparkContext(conf);
 
     JavaRDD<String> file = context.textFile(args[0]);
