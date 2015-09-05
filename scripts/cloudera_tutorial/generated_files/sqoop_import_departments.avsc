@@ -1,0 +1,17 @@
+{
+  "type" : "record",
+  "name" : "sqoop_import_departments",
+  "doc" : "Sqoop import of departments",
+  "fields" : [ {
+    "name" : "department_id",
+    "type" : [ "int", "null" ],
+    "columnName" : "department_id",
+    "sqlType" : "4"
+  }, {
+    "name" : "department_name",
+    "type" : [ "string", "null" ],
+    "columnName" : "department_name",
+    "sqlType" : "12"
+  } ],
+  "tableName" : "departments"
+}

@@ -1,0 +1,37 @@
+{
+  "type" : "record",
+  "name" : "sqoop_import_products",
+  "doc" : "Sqoop import of products",
+  "fields" : [ {
+    "name" : "product_id",
+    "type" : [ "int", "null" ],
+    "columnName" : "product_id",
+    "sqlType" : "4"
+  }, {
+    "name" : "product_category_id",
+    "type" : [ "int", "null" ],
+    "columnName" : "product_category_id",
+    "sqlType" : "4"
+  }, {
+    "name" : "product_name",
+    "type" : [ "string", "null" ],
+    "columnName" : "product_name",
+    "sqlType" : "12"
+  }, {
+    "name" : "product_description",
+    "type" : [ "string", "null" ],
+    "columnName" : "product_description",
+    "sqlType" : "12"
+  }, {
+    "name" : "product_price",
+    "type" : [ "float", "null" ],
+    "columnName" : "product_price",
+    "sqlType" : "7"
+  }, {
+    "name" : "product_image",
+    "type" : [ "string", "null" ],
+    "columnName" : "product_image",
+    "sqlType" : "12"
+  } ],
+  "tableName" : "products"
+}
