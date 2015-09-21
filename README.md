@@ -81,4 +81,5 @@ Connect `spark-shell` to the cluster (when logged onto cloudera box)
     spark-shell --master yarn-client
 
 
-
+Elasticsearch Marvel
+[Marvel](http://192.168.0.43:9200/_plugin/marvel)
