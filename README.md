@@ -73,6 +73,8 @@ Running the Spark Wordcount example
 The VM config area is `/etc/hadoop/conf/`
 
 [DFS Health](http://192.168.0.10:50070/dfshealth.jsp) Monitoring App
+[Hadoop GUI](http://192.168.0.43:8088/cluster) Hadoop GUI
+[SparkUI](http://192.168.0.43:4040) SparkUI
 
 
 
