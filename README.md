@@ -76,5 +76,9 @@ The VM config area is `/etc/hadoop/conf/`
 [Hadoop GUI](http://192.168.0.43:8088/cluster) Hadoop GUI
 [SparkUI](http://192.168.0.43:4040) SparkUI
 
+Connect `spark-shell` to the cluster (when logged onto cloudera box)
+
+    spark-shell --master yarn-client
+
 
 
